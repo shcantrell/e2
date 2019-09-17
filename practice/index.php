@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang='en'>
 <head>
-	<title>Practice Application</title>
+	<title>Practice Application After 2nd Installation</title>
 	<meta charset='utf-8'>
 </head> 
 <body> 
