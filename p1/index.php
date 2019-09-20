@@ -44,7 +44,7 @@
         <img src="/images/shcantrell_headshot_small.jpg" alt="Headshot of Susan Cantrell at the National Mall in Washington, DC.">
         <h1>Susan H. Cantrell</h1>
         <aside>
-            <p>Hello! This will be my last HES course before tackling the capstone project (eeeek!) in pursuit of a Masters of Liberal Arts in Digital Media Design.</p>
+            <p>Hello! This will be my last HES course before tackling the capstone project (eeeek!) 4 in pursuit of a Masters of Liberal Arts in Digital Media Design.</p>
 
             <p>I started as a graphic designer over 15 years ago, which only evolved into web design and is now inching toward web development - what that last part means exactly, I am still figuring out.</p>
                     
