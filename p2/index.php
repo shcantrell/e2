@@ -9,7 +9,7 @@
     <meta charset='utf-8'>
     <style>
         body {
-            width: 60%;
+            width: 50em;
             margin: 3em auto 0 auto;
             font-family: Calibri, sans-serif;
         }
