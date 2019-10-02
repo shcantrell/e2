@@ -41,7 +41,7 @@ for ($i = 0; $i <= 1; $i++) {
              $primaryColorSelected[$a][2] = $secondaryColorArray[1][1];
              $secondaryColorArray[1][0]++;
             // echo (' Answer ' . $a . ' is ' . $mixedColorResult . ' ');
-        } elseif (( array_pad($primaryColorSelected[$a], 2, 0)  == $primaryColorSelected[$a]) and ($primaryColorSelected[$a][0] == $primaryColorSelected[$a][1])) {
+        } else (( array_pad($primaryColorSelected[$a], 2, 0)  == $primaryColorSelected[$a]) and ($primaryColorSelected[$a][0] == $primaryColorSelected[$a][1])) {
              $primaryColorSelected[$a][2] = ('the same color ' . $primaryColorSelected[$a][0]);
              $matchingCounts++;
         }
@@ -54,7 +54,7 @@ foreach ($secondaryColorArray as $position => [$counts, $name]) {
         $mostCounted = ('The secondary color that was mixed the most is ' . $name . ', at ' . $counts . ' counts.' );
     } elseif (($secondaryColorArray[0][0] == $secondaryColorArray[1][0]) and ($secondaryColorArray[1][0] == $secondaryColorArray[2][0]) and ($secondaryColorArray[0][0] == $secondaryColorArray[2][0])) {
         $mostCounted = ('The secondary color that was mixed the most is tied between ' . $secondaryColorArray[0][1] . ',  ' . $secondaryColorArray[1][1] . ', and ' . $secondaryColorArrays[2][1] . ' at  ' . $counts . ' counts each.' );
-    } elseif (($secondaryColorArray[0][0] == $secondaryColorArray[1][0]) and ($secondaryColorArray[1][0] != $secondaryColorArray[2][0])) {
+    } else (($secondaryColorArray[0][0] == $secondaryColorArray[1][0]) and ($secondaryColorArray[1][0] != $secondaryColorArray[2][0])) {
         $mostCounted = ('The secondary color that was mixed the most is tied between ' . $secondaryColorArray[0][1] . ' and ' . $secondaryColorArray[1][1] . ' at  ' . $counts . ' counts each.' );
     } 
     break;

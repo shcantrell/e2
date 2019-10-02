@@ -36,4 +36,6 @@ If you view [index2.php](http://p2.shcantrell.me/index2.php) and [index-controll
 
 When the output results in all 'mixed' colors being the the same number (3-way tie), a Notice appears stating that I have an `Undefinted variable` but I cannot figure out where the issue is, exactly.
 
+Also, every time I would end my `if` `else if` construct with `else`, I would always get an error (syntax), but when I tried to correc that - it would create larger issues.
+
 I also was not sure how to address validation errors when the `<?` php was being marked repeadtedly as an error.
