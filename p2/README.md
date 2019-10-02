@@ -34,6 +34,6 @@ That was challengeing.
 
 If you view [index2.php](http://p2.shcantrell.me/index2.php) and [index-controller2.php](http://p2.shcantrell.me/index-controller2.php), you will see my first attempt where I conflicted with what was proper separations of concerns. That was a very challening concept for me.
 
-When the output results in all 'mixed' colors being the the same number (3-way tie), a Notice appears state that I have an `Undefinted variable` but I cannot figure out where the issue is, exactly.
+When the output results in all 'mixed' colors being the the same number (3-way tie), a Notice appears stating that I have an `Undefinted variable` but I cannot figure out where the issue is, exactly.
 
 I also was not sure how to address validation errors when the `<?` php was being marked repeadtedly as an error.
