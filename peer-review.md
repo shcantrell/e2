@@ -14,9 +14,9 @@
 * There were no separation of concern issues.
 
 ### Are there aspects of the code that you feel were not self-evident and would benefit from comments?'
-* I admit that this is similar to learning a spoken language where I can speak it and understand when someone is speaking it to me, but I struggle when reading it.
+* I admit that this is similar to learning a spoken language where I can speak it and understand it when someone is speaking it to me, but I struggle when reading it.
 
-    That being said, it would have been quicker for me to connect the dots if `$results` and `$showResults` were given comments as to their future usage, since a relationship is not associated in the same code source. Again, this is most likely due to my inability to quickly translate the code.
+    That being said, if `$results` and `$showResults` had comments on how they would be used later in the code's process, it would have helped me. Since a relationship was not associated close by in the same code source, I would "lose my place" in my reading - hehe. 
 
 ### List any/all built-in PHP methods used with a brief summary of what the method does
 * session_start():
