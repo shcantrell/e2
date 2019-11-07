@@ -17,39 +17,39 @@ for ($i = 0; $i <= 1; $i++) {
     for ($a = 1; $a <= 50; $a++) {
         $primaryColorSelected[$a][] = $primaryColorArray[rand(0, 2)];
     
-        if ( (array_pad($primaryColorSelected[$a], 2, 0) == $primaryColorSelected[$a]) and ($primaryColorSelected[$a][0] == 'red' and $primaryColorSelected[$a][1] == 'blue') ) {
+        if ((array_pad($primaryColorSelected[$a], 2, 0) == $primaryColorSelected[$a]) and ($primaryColorSelected[$a][0] == 'red' and $primaryColorSelected[$a][1] == 'blue')) {
             $primaryColorSelected[$a][2] = $secondaryColorArray[2][1];
             $secondaryColorArray[2][0]++;
-        } elseif ( (array_pad($primaryColorSelected[$a], 2, 0) == $primaryColorSelected[$a]) and ($primaryColorSelected[$a][0] == 'blue' and $primaryColorSelected[$a][1] == 'red') ) {
+        } elseif ((array_pad($primaryColorSelected[$a], 2, 0) == $primaryColorSelected[$a]) and ($primaryColorSelected[$a][0] == 'blue' and $primaryColorSelected[$a][1] == 'red')) {
             $primaryColorSelected[$a][2] = $secondaryColorArray[2][1];
             $secondaryColorArray[2][0]++;
-        } elseif ( (array_pad($primaryColorSelected[$a], 2, 0) == $primaryColorSelected[$a]) and ($primaryColorSelected[$a][0] == 'yellow' and $primaryColorSelected[$a][1] == 'blue') ) {
+        } elseif ((array_pad($primaryColorSelected[$a], 2, 0) == $primaryColorSelected[$a]) and ($primaryColorSelected[$a][0] == 'yellow' and $primaryColorSelected[$a][1] == 'blue')) {
             $primaryColorSelected[$a][2] = $secondaryColorArray[0][1];
             $secondaryColorArray[0][0]++;
-        } elseif ( ( array_pad($primaryColorSelected[$a], 2, 0) == $primaryColorSelected[$a]) and ($primaryColorSelected[$a][0] == 'blue' and $primaryColorSelected[$a][1] == 'yellow') ) {
-             $primaryColorSelected[$a][2] = $secondaryColorArray[0][1];
-             $secondaryColorArray[0][0]++;
-        } elseif ( ( array_pad($primaryColorSelected[$a], 2, 0) == $primaryColorSelected[$a]) and ($primaryColorSelected[$a][0] == 'yellow' and $primaryColorSelected[$a][1] == 'red') ) {
-             $primaryColorSelected[$a][2] = $secondaryColorArray[1][1];
-             $secondaryColorArray[1][0]++;
-        } elseif ( ( array_pad($primaryColorSelected[$a], 2, 0) == $primaryColorSelected[$a]) and ($primaryColorSelected[$a][0] == 'red' and $primaryColorSelected[$a][1] == 'yellow') ) {
-             $primaryColorSelected[$a][2] = $secondaryColorArray[1][1];
-             $secondaryColorArray[1][0]++;
-        } elseif (( array_pad($primaryColorSelected[$a], 2, 0)  == $primaryColorSelected[$a]) and ($primaryColorSelected[$a][0] == $primaryColorSelected[$a][1])) {
-             $primaryColorSelected[$a][2] = ('the same color ' . $primaryColorSelected[$a][0]);
-             $matchingCounts++;
+        } elseif ((array_pad($primaryColorSelected[$a], 2, 0) == $primaryColorSelected[$a]) and ($primaryColorSelected[$a][0] == 'blue' and $primaryColorSelected[$a][1] == 'yellow')) {
+            $primaryColorSelected[$a][2] = $secondaryColorArray[0][1];
+            $secondaryColorArray[0][0]++;
+        } elseif ((array_pad($primaryColorSelected[$a], 2, 0) == $primaryColorSelected[$a]) and ($primaryColorSelected[$a][0] == 'yellow' and $primaryColorSelected[$a][1] == 'red')) {
+            $primaryColorSelected[$a][2] = $secondaryColorArray[1][1];
+            $secondaryColorArray[1][0]++;
+        } elseif ((array_pad($primaryColorSelected[$a], 2, 0) == $primaryColorSelected[$a]) and ($primaryColorSelected[$a][0] == 'red' and $primaryColorSelected[$a][1] == 'yellow')) {
+            $primaryColorSelected[$a][2] = $secondaryColorArray[1][1];
+            $secondaryColorArray[1][0]++;
+        } elseif ((array_pad($primaryColorSelected[$a], 2, 0)  == $primaryColorSelected[$a]) and ($primaryColorSelected[$a][0] == $primaryColorSelected[$a][1])) {
+            $primaryColorSelected[$a][2] = ('the same color ' . $primaryColorSelected[$a][0]);
+            $matchingCounts++;
         }
     }
 }
 
 rsort($secondaryColorArray);
-foreach ($secondaryColorArray as $position => [$counts, $name]) { 
-    if (($secondaryColorArray[0][0] > $secondaryColorArray[1][0]) and ($secondaryColorArray[0][0] > $secondaryColorArray[2][0])) { 
-        $mostCounted = ('The secondary color that was mixed the most is ' . $name . ', at ' . $counts . ' counts.' );
+foreach ($secondaryColorArray as $position => [$counts, $name]) {
+    if (($secondaryColorArray[0][0] > $secondaryColorArray[1][0]) and ($secondaryColorArray[0][0] > $secondaryColorArray[2][0])) {
+        $mostCounted = ('The secondary color that was mixed the most is ' . $name . ', at ' . $counts . ' counts.');
     } elseif (($secondaryColorArray[0][0] == $secondaryColorArray[1][0]) and ($secondaryColorArray[1][0] == $secondaryColorArray[2][0]) and ($secondaryColorArray[0][0] == $secondaryColorArray[2][0])) {
-        $mostCounted = ('The secondary color that was mixed the most is a 3-way tie between ' . $secondaryColorArray[0][1] . ',  ' . $secondaryColorArray[1][1] . ', and ' . $secondaryColorArray[2][1] . ', at  ' . $counts . ' counts each.' );
+        $mostCounted = ('The secondary color that was mixed the most is a 3-way tie between ' . $secondaryColorArray[0][1] . ',  ' . $secondaryColorArray[1][1] . ', and ' . $secondaryColorArray[2][1] . ', at  ' . $counts . ' counts each.');
     } elseif (($secondaryColorArray[0][0] == $secondaryColorArray[1][0]) and ($secondaryColorArray[1][0] !== $secondaryColorArray[2][0]) and ($secondaryColorArray[0][0] !== $secondaryColorArray[2][0])) {
-        $mostCounted = ('The secondary color that was mixed the most is a 2-way tie between ' . $secondaryColorArray[0][1] . ' and ' . $secondaryColorArray[1][1] . ', at  ' . $counts . ' counts each.' );
-    } 
+        $mostCounted = ('The secondary color that was mixed the most is a 2-way tie between ' . $secondaryColorArray[0][1] . ' and ' . $secondaryColorArray[1][1] . ', at  ' . $counts . ' counts each.');
+    }
     break;
 }
