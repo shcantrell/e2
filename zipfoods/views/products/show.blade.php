@@ -17,7 +17,7 @@
     <div class='product-price'>${{ $product['price'] }}</div>
 </div>
 
-<a href='/products'>&larr; Retrun to all products</a>
+<a href='/products'>&larr; Return to all products</a>
 
 
 @endsection
