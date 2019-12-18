@@ -1,7 +1,7 @@
 @extends('templates.master')
 
 @section('title')
-All Prodcuts
+All Products
 @endsection
 
 @section('content')

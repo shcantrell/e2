@@ -1,0 +1,11 @@
+h1 {
+    color: green;
+}
+
+input.dateBox {
+    width: 6em;
+}
+
+input.foodItem {
+    width: 25em;
+}

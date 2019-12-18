@@ -1,0 +1,55 @@
+What routes will you have? (Include routes needed to handle form submissions).
+From these routes, which controller/method(s) will be triggered?
+What's the structure of your database table(s) (column names, data types)
+What form input types will your game have, and how should those inputs be validate
+
+
+PROJECT GOALS:
+* Create a meal planner (total of caloric intake per day)
+* Start with one day entry. 
+* **IF** time permits:
+    * Can a caloric goal be entered to offset the sum of indivdiual caloric entries made?
+    * Is there an API that can auto input common food names and caloric count?
+    * Can new intake fields be added? This will require new fields be added to the database.
+    * If daily entry form is successful, expand to a weekly planner.
+    * Can recipes be incorporated and broken down per servings? HA--unlikely!
+    
+INTERFACE/DATABASE REQUIREMENTS:
+* Default enty ID (ID)
+* Field for day of week
+    * CHAR, max length = 5 for "THURS" as highest demominator
+* Field for daily caloric goal (INT)
+* Fields for food name and caloric intake
+    * NOTE: After success with calculating "Meals," add "Snacks"
+    * Meal 1 (VARCHAR)  Calories: (INT)
+    * Snack 1 (VARCHAR) Calories: (INT)
+    * Meal 2 (VARCHAR)  Calories: (INT)
+    * Snack 2 (VARCHAR) Calories: (INT) 
+    * Meal 3 (VARCHAR)  Calories: (INT)
+    * Snack 3 (VARCHAR) Calories: (INT)
+   
+* Display sum of individual caloric intake will be needed (INT)
+* Display how sum offests goal amount (INT)
+
+ROUTES:
+* Index page
+* Calculations for caloric intake sum and how it offsets the goal amount
+    * Sum of intput method
+    * Difference of input with goal entered method
+* Save input of entries made
+    * Insert database method
+* Display record of entries per date
+    * Display per ID method
+
+
+
+
+
+DATABASE: Weekday
+ID = 1
+Day = Mon
+
+DATABASE: Meals
+ID = 1
+Meal = required|text|maxLength:20
+Calories = required|numeric
